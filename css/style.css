@@ -6,9 +6,7 @@ main {
 
 img {
     float: left;
-}
-p {
-    float: left;
+    margin-bottom: 10%;
 }
 
 .content {
@@ -17,10 +15,10 @@ p {
     padding: 20px;
 }
 
-.col-md-6 {
+/* .col-md-6 {
     margin-top: 25px;
     margin-bottom: 25px;
-}
+} */
 
 form {
     margin: 0px 20%;
@@ -32,4 +30,7 @@ form {
 
 .nav-link:hover {
     cursor: pointer;
+}
+#linkedin{
+    margin-top: 1.5%;
 }
