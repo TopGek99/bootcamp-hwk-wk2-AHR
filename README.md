@@ -16,4 +16,4 @@ contains a non-functioning contact form. All pages contain a navbar that has lin
 ## Links
 
 - Repo (Yes this one): https://github.com/TopGek99/bootcamp-hwk-wk2
-- Webpage: https://topgek99.github.io/bootcamp-hwk-wk2/
+- Webpage: https://topgek99.github.io/bootcamp-hwk-wk2-AHR/
