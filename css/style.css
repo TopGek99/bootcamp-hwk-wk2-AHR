@@ -25,3 +25,11 @@ p {
 form {
     margin: 0px 20%;
 }
+
+#portfolio, #contact {
+    display: none;
+}
+
+.nav-link:hover {
+    cursor: pointer;
+}
