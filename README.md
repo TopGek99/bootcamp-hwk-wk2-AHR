@@ -1,4 +1,4 @@
-# bootcamp-hwk-wk2-AHR
+# responsive-portfolio
 
 ## Description
 
