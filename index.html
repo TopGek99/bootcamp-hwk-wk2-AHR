@@ -6,22 +6,33 @@
     <title>About Me</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="//cdn.jsdelivr.net/npm/less@3.13" ></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body style="background-color:gray;">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a href="#" class="navbar-brand">Alex Rowe</a>
+<body>
+    <nav id="my-nav" class="navbar navbar-expand navbar-dark">
+        <div id="my-nav" class="container-fluid">
+            <span class="navbar-brand">Alex Rowe</span>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a id="about-link" class="nav-link active" aria-current="page">About Me</a>
+                    <li class="nav-item non-dropdown">
+                        <a class="nav-link active about-link" aria-current="page">About Me</a>
                     </li>
-                    <li>
-                        <a id="portfolio-link" class="nav-link">Portfolio</a>
+                    <li class="non-dropdown">
+                        <a class="nav-link portfolio-link">Portfolio</a>
                     </li>
-                    <li>
-                        <a id="contact-link" class="nav-link">Contact</a>
+                    <li class="non-dropdown">
+                        <a class="nav-link contact-link">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown" id="dropdown-outer">
+                        <a class="nav-link dropdown-toggle active" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          About Me
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item disabled about-link" href="#">About Me</a></li>
+                          <li><a class="dropdown-item portfolio-link" href="#">Portfolio</a></li>
+                          <li><a class="dropdown-item contact-link" href="#">Contact</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -33,7 +44,6 @@
             <hr>
             <div class="col-md-3">
                 <img class="img img-thumbnail" src="img/passport-style.PNG" alt="Passport Style Profile Photo">
-                
             </div>
             <div class="col-md-9">
                 <div class="row">
@@ -65,22 +75,47 @@
         </section>
     </main>
     <main id="portfolio" class="container-sm content">
-        <div class="row">
-            <h1>Portfolio</h1>
-            <hr>
-            <div class="col-md-6">
-                <img class="img-fluid" src="img/screenshot1.PNG" alt="Homework 1 webpage screenshot (1/2)">
+        <h1>Portfolio</h1>
+        <hr>
+        <div class="row project">
+            <div id="joke-gif" class="col-md-6">
+                <h2>JOKE GIF</h2>
+                <p>
+                    The goal for this project was to create an app combining two different api's. The first api chosen was a joke api that stores thousands of jokes and allows the user to search for a particular joke using key words. The second api was a gif api that brings up random gifs based on key words that the user has chosen. To combine the two, the key word that is chosen by the user brings up both a joke and a gif.
+                </p>
+                <p><a target="_blank" href="https://topgek99.github.io/joke-gif">Deployed Link</a></p>
+                <p><a target="_blank" href="https://github.com/TopGek99/joke-gif">Github Repo</a></p>
             </div>
             <div class="col-md-6">
-                <img class="img-fluid" src="img/screenshot2.PNG" alt="Homework 1 webpage screenshot (2/2)">
+                <img id="joke-img" class="img-thumbnail zoom" src="img/joke-gif.png" alt="Prework about me webpage screenshot (2/2)">
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <img class="img-fluid" src="img/prework1.PNG" alt="Prework about me webpage screenshot (1/2)">
+        <hr>
+        <div class="row project">
+            <div id="weather-img" class="col-md-6">
+                <img class="img-thumbnail" src="img/weather.png" alt="Homework 1 webpage screenshot (2/2)">
+            </div>
+            <div id="weather-db" class="col-md-6">
+                <h2>WEATHER DASHBOARD</h2>
+                <p>
+                    The purpose of this project was to use the <a href="https://openweathermap.org/">OpenWeather API</a> to create a web application that displays certain weather information such as current temperature and a 5 day forecast for a certain city. The user inputs a city name, then clicks the search button and the relevant information appears for that city. The user also has the option to view the cities they have already searched for by clicking the button on the left hand side of the screen that corresponds to the city they wish to view that they had previously searched for. There is also an option to clear this history.
+                </p>
+                <p><a target="_blank" href="https://topgek99.github.io/weather-dashboard">Deployed Link</a></p>
+                <p><a target="_blank" href="https://github.com/TopGek99/weather-dashboard">Github Repo</a></p>
+            </div>
+        </div>
+        <hr>
+        <div class="row project">
+            <div id="js-quiz" class="col-md-6">
+                <h2>THE JAVASCRIPT QUIZ</h2>
+                <p>
+                    In this project the goal was to create a responsive webpage from scratch that allowed the user to complete a quiz on the programming language JavaScript. The quiz had to be timed, and consist of multiple choice questions in which if the user answered incorrectly, time was deducted from the time they had to complete it. The webpage also had to include the ability to record the user's score and add it to a high score list shown after submission.
+                </p>
+                <p><a target="_blank" href="https://topgek99.github.io/the-javascrip-quiz">Deployed Link</a></p>
+                <p><a target="_blank" href="https://github.com/TopGek99/the-javascrip-quiz">Github Repo</a></p>
             </div>
             <div class="col-md-6">
-                <img class="img-fluid" src="img/prework2.PNG" alt="Prework about me webpage screenshot (2/2)">
+                <img id="js-img" class="img-thumbnail zoom" src="img/js-quiz.png" alt="Prework about me webpage screenshot (2/2)">
             </div>
         </div>
     </main>
@@ -103,6 +138,7 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="javascript/script.js"></script>
 </body>

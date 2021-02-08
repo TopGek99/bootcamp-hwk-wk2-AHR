@@ -1,34 +1,50 @@
 var aboutMeDiv = $("#about-me");
-var aboutMeLink = $("#about-link");
+var aboutMeLinks = $(".about-link");
 var portfolioDiv = $("#portfolio");
-var portfolioLink = $("#portfolio-link");
+var portfolioLinks = $(".portfolio-link");
 var contactDiv = $("#contact");
-var contactLink = $("#contact-link");
-var links = $(".nav-link");
+var contactLinks = $(".contact-link");
+var dropdown = $("#navbarDropdownMenuLink");
 
-links.on("click", function(event) {
+
+aboutMeLinks.on("click", function(event) {
     event.preventDefault();
-    if ($(this).attr("id") == "about-link") {
-        portfolioDiv.css("display","none");
-        contactDiv.css("display","none");
-        aboutMeDiv.css("display","block");
-        portfolioLink.removeClass("active");
-        contactLink.removeClass("active");
-        aboutMeLink.addClass("active");
-    } else if ($(this).attr("id") == "portfolio-link") {
-        aboutMeDiv.css("display","none");
-        contactDiv.css("display","none");
-        portfolioDiv.css("display","block");
-        aboutMeLink.removeClass("active");
-        contactLink.removeClass("active");
-        portfolioLink.addClass("active");
-    } else if ($(this).attr("id") == "contact-link") {
-        aboutMeDiv.css("display","none");
-        portfolioDiv.css("display","none");
-        contactDiv.css("display","block");
-        aboutMeLink.removeClass("active");
-        portfolioLink.removeClass("active");
-        contactLink.addClass("active");
-    }
+    portfolioDiv.css("display","none");
+    contactDiv.css("display","none");
+    aboutMeDiv.css("display","block");
+    portfolioLinks[0].classList.remove("active");
+    contactLinks[0].classList.remove("active");
+    aboutMeLinks[0].classList.add("active");
+    portfolioLinks[1].classList.remove("disabled");
+    contactLinks[1].classList.remove("disabled");
+    aboutMeLinks[1].classList.add("disabled");
+    dropdown.text("About Me");
 });
+portfolioLinks.on("click", function(event) {
+    event.preventDefault();
+    aboutMeDiv.css("display","none");
+    contactDiv.css("display","none");
+    portfolioDiv.css("display","block");
+    aboutMeLinks[0].classList.remove("active");
+    contactLinks[0].classList.remove("active");
+    portfolioLinks[0].classList.add("active");
+    aboutMeLinks[1].classList.remove("disabled");
+    contactLinks[1].classList.remove("disabled");
+    portfolioLinks[1].classList.add("disabled");
+    dropdown.text("Portfolio");
+});
+contactLinks.on("click", function(event) {
+    aboutMeDiv.css("display","none");
+    portfolioDiv.css("display","none");
+    contactDiv.css("display","block");
+    aboutMeLinks[0].classList.remove("active");
+    portfolioLinks[0].classList.remove("active");
+    contactLinks[0].classList.add("active");
+    aboutMeLinks[1].classList.remove("disabled");
+    portfolioLinks[1].classList.remove("disabled");
+    contactLinks[1].classList.add("disabled");
+    dropdown.text("Contact");
+});
+
+
 
